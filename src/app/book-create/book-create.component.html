@@ -1,0 +1,32 @@
+<div class="container">
+  <h1>Add New Book</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <form (ngSubmit)="saveBook()" #bookForm="ngForm">
+        <div class="form-group">
+          <label for="name">name</label>
+          <input type="text" class="form-control" [(ngModel)]="book.name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="name">password</label>
+          <input type="password" class="form-control" [(ngModel)]="book.password" name="password" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Heading</label>
+          <input type="text" class="form-control" [(ngModel)]="book.heading" name="heading" required>
+        </div>
+        <div class="form-group">
+          <label for="name">content</label>
+          <input type="text" class="form-control" [(ngModel)]="book.content" name="content" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Published_date</label>
+          <input type="text" class="form-control" [(ngModel)]="book.published_date" name="published_date" required>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success" [disabled]="!bookForm.form.valid">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

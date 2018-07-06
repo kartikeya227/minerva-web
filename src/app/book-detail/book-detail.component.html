@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>{{ book.name }}</h1>
+  <dl class="list">
+    <dt>ISBN</dt>
+    <dd>{{ book.heading }}</dd>
+    <dt>Author</dt>
+    <dd>{{ book.content }}</dd>
+    <dt>Publish Year</dt>
+    <dd>{{ book.published_date }}</dd>
+  </dl>
+</div>
+<div class="row">
+  <div class="col-md-12">
+
+    <a [routerLink]="['/books']" class="btn btn-success">back</a>
+    <a [routerLink]="book.password=='ka1001si'?['/sites']:['/books']" class="btn btn-success">link</a>
+    <a [routerLink]="['/book-edit', book._id]" class="btn btn-success">EDIT</a>
+    <button class="btn btn-danger" type="button" (click)="deleteBook(book._id)">DELETE</button>
+
+  </div>
+</div>
