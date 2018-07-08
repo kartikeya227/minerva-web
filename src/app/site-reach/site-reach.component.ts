@@ -8,12 +8,16 @@ import { HttpClient } from '@angular/common/http';
 })
 export class SiteComponent implements OnInit {
 
-  books: any;
+  articles: any;
 
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.http.get('/sites');
+    this.http.get('/book').subscribe(data => {
+      console.log(data);
+      this.articles = data;
+    });
   }
+
 
 }

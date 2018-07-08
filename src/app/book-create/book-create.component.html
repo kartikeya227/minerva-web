@@ -8,10 +8,6 @@
           <input type="text" class="form-control" [(ngModel)]="book.name" name="name" required>
         </div>
         <div class="form-group">
-          <label for="name">password</label>
-          <input type="password" class="form-control" [(ngModel)]="book.password" name="password" required>
-        </div>
-        <div class="form-group">
           <label for="name">Heading</label>
           <input type="text" class="form-control" [(ngModel)]="book.heading" name="heading" required>
         </div>
@@ -27,6 +23,10 @@
           <button type="submit" class="btn btn-success" [disabled]="!bookForm.form.valid">Save</button>
         </div>
       </form>
+    </div>
+    <div>
+      <a [routerLink]="['/books']" class="btn btn-default btn-lg">Back</a>
+      <a [routerLink]="['/']" class="btn btn-default btn-lg">Logout</a>
     </div>
   </div>
 </div>

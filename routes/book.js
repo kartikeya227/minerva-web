@@ -2,10 +2,18 @@ var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
 var Book = require('../models/Book.js');
+var User = require('../models/User.js');
 
 /* GET ALL BOOKS */
 router.get('/', function(req, res, next) {
   Book.find(function (err, products) {
+    if (err) return next(err);
+    res.json(products);
+  });
+});
+/*GET ALL USERS*/
+router.get('/user', function(req, res, next) {
+  User.find(function (err, products) {
     if (err) return next(err);
     res.json(products);
   });

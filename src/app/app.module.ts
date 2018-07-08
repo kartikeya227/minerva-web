@@ -10,7 +10,8 @@ import { SiteComponent } from './site-reach/site-reach.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import { BookCreateComponent } from './book-create/book-create.component';
 import { BookEditComponent } from './book-edit/book-edit.component';
-
+import { LoginComponent } from './login/login.component';
+import {L} from '@angular/core/src/render3';
 const appRoutes: Routes = [
   {
     path: 'books',
@@ -20,6 +21,10 @@ const appRoutes: Routes = [
   {
     path: 'sites',
     component: SiteComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
   },
   {
     path: 'book-details/:id',
@@ -37,7 +42,7 @@ const appRoutes: Routes = [
     data: { title: 'Edit Book' }
   },
   { path: '',
-    redirectTo: '/books',
+    redirectTo: '/sites',///books == for "original book normal"
     pathMatch: 'full'
   }
 ];
@@ -48,7 +53,8 @@ const appRoutes: Routes = [
     SiteComponent,
     BookDetailComponent,
     BookCreateComponent,
-    BookEditComponent
+    BookEditComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

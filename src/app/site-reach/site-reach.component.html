@@ -1,2 +1,31 @@
-<h1>MINERVA</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MINERVA</title>
+</head>
+<body>
+<h1>MINERVA main PAGE</h1>
+<div>
+  <a [routerLink]="['/login']" class="btn btn-success">|Login|</a>
 
+  <div>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Author</th>
+        <th>Heading</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let book of articles">
+        <td>{{ book.name }}</td>
+        <td>{{ book.heading }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</body>
+</html>
