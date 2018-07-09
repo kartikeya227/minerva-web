@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'sites',
   templateUrl: './site-reach.component.html',
+  styleUrls: ['./site-reach.component.css'],
   encapsulation: ViewEncapsulation.None
 })
 export class SiteComponent implements OnInit {
